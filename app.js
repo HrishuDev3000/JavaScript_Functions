@@ -6,7 +6,7 @@ console.log("EXERCISE 1:\n==========\n");
 function printOdds(count){
     for(let i = 0; i <= count; i++){
        if( count < 0){
-            console.log(count)
+            console.log("negative count " + count)
            }
        if(i % 2 == 1){
             console.log(i);
@@ -23,6 +23,10 @@ function checkAge(userName, age){
     let aboveSixteen = "Congrats " + userName + ", you can drive!";
     let belowSixteen = "Sorry " + userName + ", but you need to wait until you're 16.";
 
+    if(!userName){
+        console.log("Please give name");
+    }
+     
     if( age >= 16){
         console.log(aboveSixteen);
     }
@@ -31,20 +35,6 @@ function checkAge(userName, age){
     }
 }
 
-function checkAge2(){
-    let userName = prompt("Enter your name")
-    let age = prompt("Enter your age")
-
-    let aboveSixteen = "Congrats " + userName + ", you can drive!";
-    let belowSixteen = "Sorry " + userName + ", but you need to wait until you're 16.";
-
-    if( age >= 16){
-        console.log(aboveSixteen);
-    }
-    else{
-        console.log(belowSixteen);
-    }
-}
 
 
 // Exercise 3 Section
@@ -102,7 +92,7 @@ function quadrantChecker(x, y){
 console.log("EXERCISE 4:\n==========\n");
 function triangleChecker(x, y, z){
      
-    if(x + y > z || x + z > y || y + z > x){
+    if(x + y > z && x + z > y && y + z > x){
         if(x == y && x == z){
             console.log(" Sides" + x + ", " + y + ", " + z + " make an Equilateral triangle");
         }
